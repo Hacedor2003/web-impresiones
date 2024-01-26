@@ -54,10 +54,13 @@ export default function Page() {
 
 	//<MainNavigation type={'solicitud'} />
 	return (
-		<AnadirSolicitud
-			onAnadirTextSolicitud={addSolicitudTextHandler}
-			addSolicitudFileHandler={addSolicitudFileHandler}
-			loading={loading}
-		/>
+		<>
+			<AnadirSolicitud
+				onAnadirTextSolicitud={addSolicitudTextHandler}
+				addSolicitudFileHandler={addSolicitudFileHandler}
+				loading={loading}
+			/>
+			<p>{process.env.CHAT_ID}</p>
+		</>
 	);
 }
