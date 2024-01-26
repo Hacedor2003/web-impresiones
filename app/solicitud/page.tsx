@@ -6,16 +6,19 @@ import AnadirSolicitud from './Components/AnadirSolicitud';
 
 export default function Page() {
 	const [loading, setLoading] = useState(false);
+		const CHAT_ID = '-4120594353';
+		const TOKEN_BOT_API = '6702487731:AAHKIgUr4xE-kzTF4DyrrsqjJQiC_d7b1Hw';
 
-	const urlText = `https://api.telegram.org/bot${process.env.TOKEN_BOT_API}/sendMessage`;
-	const urlFile = `https://api.telegram.org/bot${process.env.TOKEN_BOT_API}/sendDocument`;
+
+	const urlText = `https://api.telegram.org/bot${TOKEN_BOT_API}/sendMessage`;
+	const urlFile = `https://api.telegram.org/bot${TOKEN_BOT_API}/sendDocument`;
 
 	async function addSolicitudTextHandler(solicitudData: any) {
 		setLoading(true);
 		const TextoEnviar = 'Solicitud de Impresion:\nNombre del Cliente: ' + solicitudData.nombre + '\nCarnet de Identidad: ' + solicitudData.id + '\nTelefono: ' + solicitudData.phone + '\nComentarios: ' + solicitudData.description;
 		return axios
 			.post(urlText, {
-				chat_id: process.env.CHAT_ID,
+				chat_id: CHAT_ID,
 				parse_mode: 'html',
 				text: TextoEnviar,
 			})
@@ -34,7 +37,7 @@ export default function Page() {
 			.post(
 				urlFile,
 				{
-					chat_id: process.env.CHAT_ID,
+					chat_id: CHAT_ID,
 					document: file,
 				},
 				{
@@ -60,7 +63,7 @@ export default function Page() {
 				addSolicitudFileHandler={addSolicitudFileHandler}
 				loading={loading}
 			/>
-			<p>{process.env.CHAT_ID}</p>
+			<p>{CHAT_ID}</p>
 		</>
 	);
 }
