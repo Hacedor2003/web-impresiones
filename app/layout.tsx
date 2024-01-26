@@ -9,19 +9,18 @@ export const metadata: Metadata = {
 	description: 'Pagina web para reservar impresiones en la Habana, Cuba y comprar invitaciones',
 	generator: 'Next.js',
 	manifest: '/manifest.json',
-	keywords: ['nextjs', 'nextjs13', 'next13', 'pwa', 'next-pwa'],
-	themeColor: [{ media: '(prefers-color-scheme: dark)', color: '#fff' }],
+	keywords: ['impresiones', 'invitaciones', 'reservar impresiones', 'Cuba'],
+	themeColor: [{ media: '(prefers-color-scheme: light)', color: '#fff' }],
 	authors: [
-		{ name: 'Rajesh Prajapati' },
+		{ name: 'Bryan Espinosa' },
 		{
-			name: 'Rajesh Prajapati',
-			url: 'https://www.linkedin.com/in/raazeshp96/',
+			name: 'Bryan Espinosa',
 		},
 	],
 	viewport: 'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
 	icons: [
-		{ rel: 'apple-touch-icon', url: 'icons/impresiora 64x64.png' },
-		{ rel: 'icon', url: 'icons/impresiora 180x180.png' },
+		{ rel: 'apple-touch-icon', url: '/public/icons/impresiora 64x64.png' },
+		{ rel: 'icon', url: '/public/icons/impresiora 180x180.png' },
 	],
 };
 
