@@ -10,7 +10,7 @@ export default function Page() {
 	const urlText = `https://api.telegram.org/bot${process.env.TOKEN_BOT_API}/sendMessage`;
 	const urlFile = `https://api.telegram.org/bot${process.env.TOKEN_BOT_API}/sendDocument`;
 
-	async function addSolicitudTextHandler(solicitudData) {
+	async function addSolicitudTextHandler(solicitudData: any) {
 		setLoading(true);
 		const TextoEnviar = 'Solicitud de Impresion:\nNombre del Cliente: ' + solicitudData.nombre + '\nCarnet de Identidad: ' + solicitudData.id + '\nTelefono: ' + solicitudData.phone + '\nComentarios: ' + solicitudData.description;
 		return axios
@@ -27,7 +27,7 @@ export default function Page() {
 				setLoading(true), console.log(error);
 			});
 	}
-	async function addSolicitudFileHandler(solicitudData) {
+	async function addSolicitudFileHandler(solicitudData: any) {
 		setLoading(true);
 		const file = solicitudData;
 		return axios
