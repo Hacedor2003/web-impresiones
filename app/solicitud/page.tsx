@@ -63,7 +63,6 @@ export default function Page() {
 				addSolicitudFileHandler={addSolicitudFileHandler}
 				loading={loading}
 			/>
-			<p>{CHAT_ID}</p>
 		</>
 	);
 }
