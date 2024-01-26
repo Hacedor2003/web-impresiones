@@ -10,7 +10,7 @@ export default function AnadirSolicitud({ onAnadirTextSolicitud, addSolicitudFil
 	const [description, setDescription] = useState('');
 	const [archivo, setArchivo] = useState(null);
 
-	function submitHandle(event: Event) {
+	function submitHandle(event: any) {
 		event.preventDefault();
 
 		const solicitudData = {
@@ -23,7 +23,7 @@ export default function AnadirSolicitud({ onAnadirTextSolicitud, addSolicitudFil
 		addSolicitudFileHandler(archivo);
 	}
 
-	function handleFileChange(e) {
+	function handleFileChange(e:any) {
 		const file = e.target.files[0];
 		setArchivo(file);
 	}
