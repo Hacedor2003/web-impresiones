@@ -62,7 +62,7 @@ export default function AnadirSolicitud({ onAnadirTextSolicitud, addSolicitudFil
 								required
 								id='number'
 								value={number}
-								onChange={(e) => setNombre(e.target.value)}
+								onChange={(e) => setNumber(e.target.value)}
 							/>
 						</div>
 						<div className={classes.control}>
