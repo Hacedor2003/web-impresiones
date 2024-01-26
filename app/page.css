@@ -1,0 +1,82 @@
+ .btnHome {
+   height: 50%;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-origin: content-box;
+   border: none;
+ }
+
+ #btn-imprimir {
+   background-image: url(/impresora.jpg);
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+ }
+
+ #btn-imprimir>p {
+   margin-left: 27vh;
+ }
+
+ #btn-imprimir:hover {
+   filter: opacity(0.5);
+   -webkit-filter: opacity(0.5);
+ }
+
+ #btn-imprimir:hover>p {
+   text-decoration: underline;
+ }
+
+ #btn-invitaciones {
+   background-image: url(/invitacion.jpg);
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+ }
+
+ #btn-invitaciones:hover {
+   filter: opacity(0.5);
+ }
+
+ #btn-invitaciones:hover>p {
+   text-decoration: underline;
+ }
+
+ #letras {
+   font-size: 2rem;
+   font-family: 'Times New Roman', Times, serif;
+   color: black;
+ }
+
+ .contenedor {
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+
+ .linkBtn {
+   font-weight: 800;
+   cursor: pointer;
+   position: relative;
+   border: none;
+   background: none;
+   text-transform: uppercase;
+   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+   transition-duration: 400ms;
+   transition-property: color;
+ }
+
+ @media screen and (max-width:1230px) {
+   #btn-imprimir {
+     justify-content: flex-end;
+   }
+
+   #btn-imprimir>p {
+     margin-left: 0;
+   }
+ }
