@@ -1,82 +1,58 @@
- .btnHome {
-   height: 50%;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-origin: content-box;
-   border: none;
- }
+.btnHome {
+  height: 50%;
+  background: center/contain no-repeat url(/impresora.jpg);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  filter: opacity(1);
+  -webkit-filter: opacity(1);
+}
 
- #btn-imprimir {
-   background-image: url(/impresora.jpg);
-   background-size: cover;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: flex-start;
- }
+#btn-invitaciones {
+  background: center/contain no-repeat url(/invitacion.jpg);
+}
 
- #btn-imprimir>p {
-   margin-left: 27vh;
- }
+#btn-imprimir:hover,
+#btn-invitaciones:hover {
+  filter: opacity(0.5);
+}
 
- #btn-imprimir:hover {
-   filter: opacity(0.5);
-   -webkit-filter: opacity(0.5);
- }
+#btn-imprimir:hover>p,
+#btn-invitaciones:hover>p {
+  text-decoration: underline;
+}
 
- #btn-imprimir:hover>p {
-   text-decoration: underline;
- }
+#letras {
+  font: 2rem 'Times New Roman', Times, serif;
+  color: black;
+}
 
- #btn-invitaciones {
-   background-image: url(/invitacion.jpg);
-   background-size: cover;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: flex-start;
- }
+.contenedor {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
- #btn-invitaciones:hover {
-   filter: opacity(0.5);
- }
+.linkBtn {
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition: 400ms color cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
- #btn-invitaciones:hover>p {
-   text-decoration: underline;
- }
+@media screen and (max-width:1230px) {
+  #btn-imprimir {
+    justify-content: flex-end;
+  }
 
- #letras {
-   font-size: 2rem;
-   font-family: 'Times New Roman', Times, serif;
-   color: black;
- }
-
- .contenedor {
-   height: 100vh;
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
- }
-
- .linkBtn {
-   font-weight: 800;
-   cursor: pointer;
-   position: relative;
-   border: none;
-   background: none;
-   text-transform: uppercase;
-   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-   transition-duration: 400ms;
-   transition-property: color;
- }
-
- @media screen and (max-width:1230px) {
-   #btn-imprimir {
-     justify-content: flex-end;
-   }
-
-   #btn-imprimir>p {
-     margin-left: 0;
-   }
- }
+  #btn-imprimir>p {
+    margin-left: 0;
+  }
+}
