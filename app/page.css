@@ -1,16 +1,22 @@
 .btnHome {
   height: 50%;
   width: 100%;
-  background: white;
   border: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   opacity: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #btn-invitaciones {
-  background: white;
+  background-image: url(/invitacion.jpg);
+}
+
+#btn-imprimir {
+  background-image: url(/impresora.jpg);
 }
 
 #btn-imprimir:hover,
@@ -46,12 +52,4 @@
   transition: 400ms color cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-@media screen and (max-width:1230px) {
-  #btn-imprimir {
-    justify-content: flex-end;
-  }
-
-  #btn-imprimir>p {
-    margin-left: 0;
-  }
-}
+@media screen and (max-width:1230px) {}
