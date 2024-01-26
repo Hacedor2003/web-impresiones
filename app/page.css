@@ -12,11 +12,12 @@
 }
 
 #btn-invitaciones {
-  background-image: url(/invitacion.webp);
+  background-image: url(/invitacion.jpg);
+
 }
 
 #btn-imprimir {
-  background-image: url(/impresora.webp);
+  background-image: url(/impresora.jpg);
 }
 
 #btn-imprimir:hover,
