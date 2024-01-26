@@ -1,37 +1,31 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 import classes from './index.module.css';
 import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 export default function AnadirSolicitud({ onAnadirTextSolicitud, addSolicitudFileHandler, loading }: { onAnadirTextSolicitud: Function; addSolicitudFileHandler: Function; loading: boolean }) {
-	const nombreClienteInputRef = useRef();
-	const idInputRef = useRef();
-	const numberInputRef = useRef();
-	const descriptionInputRef = useRef();
-	const archivoInputRef = useRef();
+	const [nombre, setNombre] = useState('');
+	const [id, setId] = useState('');
+	const [number, setNumber] = useState('');
+	const [description, setDescription] = useState('');
+	const [archivo, setArchivo] = useState(null);
 
 	function submitHandle(event: Event) {
 		event.preventDefault();
 
-		const enteredNombre = nombreClienteInputRef.current.value;
-		const enteredId = idInputRef.current.value;
-		const enteredNumber = numberInputRef.current.value;
-		const enteredDescription = descriptionInputRef.current.value;
-		const enteredArchivo = archivoInputRef.current;
-
 		const solicitudData = {
-			nombre: enteredNombre,
-			id: enteredId,
-			phone: enteredNumber,
-			description: enteredDescription,
+			nombre,
+			id,
+			phone: number,
+			description,
 		};
 		onAnadirTextSolicitud(solicitudData);
-		addSolicitudFileHandler(enteredArchivo);
+		addSolicitudFileHandler(archivo);
 	}
 
-	function handleFileChange(e: Event) {
+	function handleFileChange(e) {
 		const file = e.target.files[0];
-		archivoInputRef.current = file;
+		setArchivo(file);
 	}
 
 	return (
@@ -47,7 +41,8 @@ export default function AnadirSolicitud({ onAnadirTextSolicitud, addSolicitudFil
 								type='text'
 								required
 								id='title'
-								ref={nombreClienteInputRef}
+								value={nombre}
+								onChange={(e) => setNombre(e.target.value)}
 							/>
 						</div>
 						<div className={classes.control}>
@@ -56,7 +51,8 @@ export default function AnadirSolicitud({ onAnadirTextSolicitud, addSolicitudFil
 								type='text'
 								required
 								id='id'
-								ref={idInputRef}
+								value={id}
+								onChange={(e) => setId(e.target.value)}
 							/>
 						</div>
 						<div className={classes.control}>
@@ -65,7 +61,8 @@ export default function AnadirSolicitud({ onAnadirTextSolicitud, addSolicitudFil
 								type='number'
 								required
 								id='number'
-								ref={numberInputRef}
+								value={number}
+								onChange={(e) => setNombre(e.target.value)}
 							/>
 						</div>
 						<div className={classes.control}>
@@ -82,7 +79,8 @@ export default function AnadirSolicitud({ onAnadirTextSolicitud, addSolicitudFil
 							<textarea
 								id='description'
 								rows={5}
-								ref={descriptionInputRef}></textarea>
+								value={description}
+								onChange={(e) => setDescription(e.target.value)}></textarea>
 						</div>
 						<div className={classes.actions}>
 							<button type='submit'>Añadir Solicitud</button>
