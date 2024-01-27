@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hoja } from './Ui';
+import { Hoja } from '../../UI/Ui';
 
 export const ListaDeHojas = () => {
 	return (
