@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import type { Viewport } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -10,18 +11,21 @@ export const metadata: Metadata = {
 	generator: 'Next.js',
 	manifest: '/manifest.json',
 	keywords: ['impresiones', 'invitaciones', 'reservar impresiones', 'Cuba'],
-	themeColor: [{ media: '(prefers-color-scheme: light)', color: '#fff' }],
 	authors: [
 		{ name: 'Bryan Espinosa' },
 		{
 			name: 'Bryan Espinosa',
 		},
 	],
-	viewport: 'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
 	icons: [
 		{ rel: 'apple-touch-icon', url: '/public/icons/impresiora 64x64.png' },
 		{ rel: 'icon', url: '/public/icons/impresiora 180x180.png' },
 	],
+};
+export const viewport: Viewport = {
+	themeColor: 'black',
+	width: 'device-width',
+	initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
