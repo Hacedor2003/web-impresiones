@@ -6,10 +6,10 @@ export default function handleClickRemove({ clicks, setclicks, setDesabilitado }
 		const libro = document.querySelector('.iuflLG');
 		const hojas = libro?.getElementsByTagName('article');
 
-		if (index + 1 == hojas?.length) {
+		if (hojas && index + 1 == hojas?.length) {
 			setDesabilitado(false);
 		}
-		if (index < hojas?.length) {
+		if (hojas && index < hojas?.length) {
 			hojas[index].classList.remove('estyles_abrir__Z13ze');
 		}
 		setclicks((i: number) => i - 1);

@@ -5,10 +5,10 @@ export default function HandleClickAdd({ clicks, setclicks, setDesabilitado }: c
 	const libro = document.querySelector('.iuflLG');
 	const hojas = libro?.getElementsByTagName('article');
 
-	if (index < hojas?.length) {
+	if (hojas && index < hojas.length) {
 		hojas[index].classList.add('estyles_abrir__Z13ze');
 	}
-	if (index + 1 == hojas?.length) {
+	if (hojas && index + 1 === hojas.length) {
 		setDesabilitado(true);
 	}
 	setclicks((i: number) => i + 1);
