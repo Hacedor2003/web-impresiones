@@ -1,6 +1,6 @@
 'use client';
 import styles from './estyles.module.css';
-import classes from '../solicitud/styles.module.css';
+import classes from '../solicitud/Reservar_Impresion/styles.module.css';
 import Link from 'next/link';
 import { ContendorInvitaciones } from './UI/estilos';
 import Image from 'next/image';

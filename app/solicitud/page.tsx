@@ -1,68 +1,130 @@
 'use client';
-import axios from 'axios';
-import { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import AnadirSolicitud from './Components/AnadirSolicitud';
+import classes from './Reservar_Impresion/styles.module.css';
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from './estyles.module.css';
+import { EtiquetaInvitacion } from './Ui/EtiquetaInvitacion';
+import styled from 'styled-components';
+
+const Lista = styled.ul`
+	list-style: none;
+`;
+
+const ItemLista = styled.li`
+	margin: 6px;
+	width: 100%;
+	padding: 6px;
+	transition: 0.3s ease-in-out;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	&:hover {
+		color: black;
+		background-color: #7b7777;
+		filter: grayscale(1);
+		-webkit-filter: grayscale(1);
+	}
+	& > a {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 65vw;
+	}
+
+	& > a > section > p {
+		//text-wrap: wrap;
+	}
+
+	& > a > section {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		justify-content: center;
+		align-items: flex-start;
+		width: 40vw;
+	}
+`;
 
 export default function Page() {
-	const [loading, setLoading] = useState(false);
-		const CHAT_ID = '-4120594353';
-		const TOKEN_BOT_API = '6702487731:AAHKIgUr4xE-kzTF4DyrrsqjJQiC_d7b1Hw';
-
-
-	const urlText = `https://api.telegram.org/bot${TOKEN_BOT_API}/sendMessage`;
-	const urlFile = `https://api.telegram.org/bot${TOKEN_BOT_API}/sendDocument`;
-
-	async function addSolicitudTextHandler(solicitudData: any) {
-		setLoading(true);
-		const TextoEnviar = 'Solicitud de Impresion:\nNombre del Cliente: ' + solicitudData.nombre + '\nCarnet de Identidad: ' + solicitudData.id + '\nTelefono: ' + solicitudData.phone + '\nComentarios: ' + solicitudData.description;
-		return axios
-			.post(urlText, {
-				chat_id: CHAT_ID,
-				parse_mode: 'html',
-				text: TextoEnviar,
-			})
-			.then((response) => {
-				console.log(response);
-				setLoading(false);
-			})
-			.catch((error) => {
-				setLoading(true), console.log(error);
-			});
-	}
-	async function addSolicitudFileHandler(solicitudData: any) {
-		setLoading(true);
-		const file = solicitudData;
-		return axios
-			.post(
-				urlFile,
-				{
-					chat_id: CHAT_ID,
-					document: file,
-				},
-				{
-					headers: {
-						'Content-Type': 'multipart/form-data',
-					},
-				}
-			)
-			.then((response) => {
-				setLoading(false);
-				console.log(response);
-			})
-			.catch((error) => {
-				console.log(error), setLoading(false);
-			});
-	}
-
-	//<MainNavigation type={'solicitud'} />
 	return (
-		<>
-			<AnadirSolicitud
-				onAnadirTextSolicitud={addSolicitudTextHandler}
-				addSolicitudFileHandler={addSolicitudFileHandler}
-				loading={loading}
-			/>
-		</>
+		<main>
+			<header className={classes.headerCard}>Que desea?</header>
+			<div className={styles.contenedor}>
+				<Lista>
+					<ItemLista>
+						<Link href={'/solicitud/Reservar_Impresion'}>
+							<Image
+								src='/perfil.jpg'
+								alt='foto de perfil'
+								width={150}
+								height={150}
+							/>
+							<section>
+								<span>Fotocopia:</span>
+								<span>Precio:</span>
+								<span>Description:</span>
+								<p>Envie su documento o foto para imprimir y recogerlo más tarde</p>
+							</section>
+						</Link>
+					</ItemLista>
+					<ItemLista>
+						<Link href={'/solicitud/Reservar_Impresion'}>
+							<Image
+								src='/perfil.jpg'
+								alt='foto de perfil'
+								width={150}
+								height={150}
+							/>
+							<section>
+								<span>Retoque Fotografico:</span>
+								<span>Precio:</span>
+								<span>Description:</span>
+								<p>Envie su foto con una descripción para añarle efectos o retoques</p>
+							</section>
+						</Link>
+					</ItemLista>
+					<ItemLista>
+						<Link href={'/solicitud/Reservar_Impresion'}>
+							<Image
+								src='/perfil.jpg'
+								alt='foto de perfil'
+								width={150}
+								height={150}
+							/>
+							<section>
+								<span>Diseño e impresiòn de documentos:</span>
+								<span>Precio:</span>
+								<span>Description:</span>
+								<p>Envie una descripción para diseñar un documento y recojer más tarde el documento</p>
+							</section>
+						</Link>
+					</ItemLista>
+					<ItemLista>
+						<Link href={'/solicitud/Reservar_Impresion'}>
+							<Image
+								src='/perfil.jpg'
+								alt='foto de perfil'
+								width={150}
+								height={150}
+							/>
+							<section>
+								<span>Tarjetas de Presentación y Diseño de invitaciones:</span>
+								<span>Precio:</span>
+								<span>Description:</span>
+								<p>Envie unos datos para imprimir las invitaciones deseada para sus</p>
+								<small>
+									<EtiquetaInvitacion />
+								</small>
+							</section>
+						</Link>
+					</ItemLista>
+				</Lista>
+			</div>
+		</main>
 	);
 }

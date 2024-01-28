@@ -1,0 +1,14 @@
+
+
+.listaInvitaciones {
+  list-style-type: none;
+}
+
+.itemListaInvitaciones {
+  position: relative;
+  display: none;
+}
+
+.itemListaInvitaciones>small {
+  position: absolute;
+}

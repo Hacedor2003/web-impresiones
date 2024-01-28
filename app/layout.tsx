@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import type { Viewport } from 'next';
+import { NavBar } from './UI/NavBar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,7 +32,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang='es'>
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<NavBar>{children}</NavBar>
+			</body>
 		</html>
 	);
 }
