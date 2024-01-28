@@ -1,5 +1,5 @@
 'use client';
-import classes from './Reservar_Impresion/styles.module.css';
+import classes from './Styles/styles.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './estyles.module.css';
@@ -57,7 +57,7 @@ export default function Page() {
 			<div className={styles.contenedor}>
 				<Lista>
 					<ItemLista>
-						<Link href={'/solicitud/Reservar_Impresion'}>
+						<Link href={'/solicitud/Fotocopia'}>
 							<Image
 								src='/perfil.jpg'
 								alt='foto de perfil'
@@ -73,7 +73,7 @@ export default function Page() {
 						</Link>
 					</ItemLista>
 					<ItemLista>
-						<Link href={'/solicitud/Reservar_Impresion'}>
+						<Link href={'/solicitud/Retoque_Fotografico'}>
 							<Image
 								src='/perfil.jpg'
 								alt='foto de perfil'
@@ -89,7 +89,7 @@ export default function Page() {
 						</Link>
 					</ItemLista>
 					<ItemLista>
-						<Link href={'/solicitud/Reservar_Impresion'}>
+						<Link href={'/solicitud/Diseno_Documentos'}>
 							<Image
 								src='/perfil.jpg'
 								alt='foto de perfil'
@@ -105,7 +105,7 @@ export default function Page() {
 						</Link>
 					</ItemLista>
 					<ItemLista>
-						<Link href={'/solicitud/Reservar_Impresion'}>
+						<Link href={'/solicitud/Diseno_Invitaciones'}>
 							<Image
 								src='/perfil.jpg'
 								alt='foto de perfil'

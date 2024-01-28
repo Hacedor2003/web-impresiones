@@ -1,14 +1,18 @@
-import { useState } from 'react';
-import classes from './index.module.css';
-import { Card } from 'react-bootstrap';
-import PropTypes from 'prop-types';
+"use client"
 
-export default function AnadirSolicitud({ onAnadirTextSolicitud, addSolicitudFileHandler, loading }: { onAnadirTextSolicitud: Function; addSolicitudFileHandler: Function; loading: boolean }) {
+import { useState } from 'react';
+import classes from '../Styles/index.module.css';
+import { Card } from 'react-bootstrap';
+import addSolicitudFileHandler from './addSolicitudHandler';
+import addSolicitudTextHandler from './addSolicitudTextHandler';
+
+export default function AnadirSolicitud() {
 	const [nombre, setNombre] = useState('');
 	const [id, setId] = useState('');
 	const [number, setNumber] = useState('');
 	const [description, setDescription] = useState('');
 	const [archivo, setArchivo] = useState(null);
+	const [loading, setLoading] = useState(false);
 
 	function submitHandle(event: any) {
 		event.preventDefault();
@@ -19,11 +23,11 @@ export default function AnadirSolicitud({ onAnadirTextSolicitud, addSolicitudFil
 			phone: number,
 			description,
 		};
-		onAnadirTextSolicitud(solicitudData);
-		addSolicitudFileHandler(archivo);
+		addSolicitudTextHandler(solicitudData, setLoading);
+		addSolicitudFileHandler(archivo, setLoading);
 	}
 
-	function handleFileChange(e:any) {
+	function handleFileChange(e: any) {
 		const file = e.target.files[0];
 		setArchivo(file);
 	}
@@ -91,8 +95,3 @@ export default function AnadirSolicitud({ onAnadirTextSolicitud, addSolicitudFil
 		</Card>
 	);
 }
-
-AnadirSolicitud.propTypes = {
-	onAnadirTextSolicitud: PropTypes.func.isRequired,
-	addSolicitudFileHandler: PropTypes.func.isRequired,
-};
