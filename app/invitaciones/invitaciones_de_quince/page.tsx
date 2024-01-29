@@ -3,7 +3,7 @@ import { useState } from 'react';
 import styles from '../estyles.module.css';
 import handleClickRemove from '../Components/handleClickRemove';
 import HandleClickAdd from '../Components/HandleClickAdd';
-import { Book, Cover } from '../UI/Ui';
+import { Book, Cover, Main } from '../UI/Ui';
 import { ListaDeHojas } from './UI/ListaDeHojas';
 import HandleClickDiv from '../Components/handleClickDiv';
 
@@ -33,9 +33,11 @@ export default function Page() {
 				</button>
 			</div>
 		) : null;
+	
 
 	return (
-		<main className={styles.contenedor}>
+		<Main>
+			
 			<Book>
 				<Cover
 					id='cover'
@@ -46,6 +48,6 @@ export default function Page() {
 				<p>Fin</p>
 			</Book>
 			{content}
-		</main>
+		</Main>
 	);
 }

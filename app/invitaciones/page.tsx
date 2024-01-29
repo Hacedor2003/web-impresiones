@@ -4,10 +4,11 @@ import classes from '../solicitud/Styles/styles.module.css';
 import Link from 'next/link';
 import { ContendorInvitaciones } from './UI/estilos';
 import Image from 'next/image';
+import { Main } from './UI/Ui';
 
 export default function Page() {
 	return (
-		<main className={styles.contenedor}>
+		<Main>
 			<header className={classes.headerCard}>Todas las invitaciones:</header>
 			<div className={styles.contenedorInvitaciones}>
 				<ContendorInvitaciones>
@@ -44,6 +45,6 @@ export default function Page() {
 					</Link>
 				</ContendorInvitaciones>
 			</div>
-		</main>
+		</Main>
 	);
 }

@@ -13,7 +13,7 @@ export default function handleClickRemove({ clicks, setclicks, setDesabilitado }
 		}
 		setclicks((i: number) => i - 1);
 	} else {
-		const portada = document.querySelector('.POOQi');
+		const portada = document.getElementById('cover');
 
 		portada?.classList.remove('estyles_abrir__Z13ze');
 		setclicks(0);
