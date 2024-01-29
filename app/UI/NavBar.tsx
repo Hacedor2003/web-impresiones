@@ -48,26 +48,33 @@ const Logo = styled.aside`
 	left: 50vw;
 	z-index: 10;
 `;
+
 export const NavBar = ({ children }: { children: ReactNode }) => {
-	const [visibleHorario, setVisibleHorario] = useState(false);
-	const [visibleUbiacion, setVisibleUbicacion] = useState(false);
-	const [visibleContactar, setVisibleContactar] = useState(false);
-	const [visibleAcerca, setVisibleAcerca] = useState(false);
+	const [visibleComponent, setVisibleComponent] = useState('');
+
+	const handleComponentClick = (componentName: string) => {
+		if (visibleComponent === componentName) {
+			setVisibleComponent('');
+		} else {
+			setVisibleComponent(componentName);
+		}
+	};
+
 	return (
 		<>
 			<BarNav>
 				<Logo>Logo</Logo>
 				<ul>
-					<li onClick={() => setVisibleHorario((prop) => !prop)}>Ver Horario</li>
-					<li onClick={() => setVisibleUbicacion((prop) => !prop)}>Ver Ubicación</li>
-					<li onClick={() => setVisibleContactar((prop) => !prop)}>Contactar</li>
-					<li onClick={() => setVisibleAcerca((prop) => !prop)}>Acerca</li>
+					<li onClick={() => handleComponentClick('Horario')}>Ver Horario</li>
+					<li onClick={() => handleComponentClick('Ubicacion')}>Ver Ubicación</li>
+					<li onClick={() => handleComponentClick('Contactar')}>Contactar</li>
+					<li onClick={() => handleComponentClick('Acerca')}>Acerca</li>
 				</ul>
 			</BarNav>
-			<Acerca visible={visibleAcerca} />
-			<Contactar visible={visibleContactar} />
-			<Horario visible={visibleHorario} />
-			<Ubicacion visible={visibleUbiacion} />
+			{visibleComponent === 'Acerca' && <Acerca visible={true} />}
+			{visibleComponent === 'Contactar' && <Contactar visible={true} />}
+			{visibleComponent === 'Horario' && <Horario visible={true} />}
+			{visibleComponent === 'Ubicacion' && <Ubicacion visible={true} />}
 			{children}
 		</>
 	);
