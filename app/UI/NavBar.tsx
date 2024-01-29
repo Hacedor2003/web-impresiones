@@ -42,7 +42,7 @@ const BarNav = styled.div`
 	}
 `;
 
-const Logo = styled.article`
+const Logo = styled.aside`
 	position: absolute;
 	top: 50vh;
 	left: 50vw;

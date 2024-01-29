@@ -3,8 +3,7 @@ import { click } from '@/app/lib/definitions';
 export default function handleClickRemove({ clicks, setclicks, setDesabilitado }: click) {
 	if (clicks > 1) {
 		const index = clicks - 2;
-		const libro = document.querySelector('.iuflLG');
-		const hojas = libro?.getElementsByTagName('article');
+		const hojas = document.getElementsByTagName('article');
 
 		if (hojas && index + 1 == hojas?.length) {
 			setDesabilitado(false);

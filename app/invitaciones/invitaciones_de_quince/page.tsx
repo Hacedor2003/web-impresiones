@@ -5,6 +5,7 @@ import handleClickRemove from '../Components/handleClickRemove';
 import HandleClickAdd from '../Components/HandleClickAdd';
 import { Book, Cover } from '../UI/Ui';
 import { ListaDeHojas } from './UI/ListaDeHojas';
+import HandleClickDiv from '../Components/handleClickDiv';
 
 export default function Page() {
 	const [clicks, setclicks] = useState(0);
@@ -15,17 +16,6 @@ export default function Page() {
 		setclicks,
 		setDesabilitado,
 	};
-
-	function handleClickDiv() {
-		const portada = document.querySelector('.POOQi');
-		if (clicks === 0) {
-			portada?.classList.add('estyles_abrir__Z13ze');
-			setclicks(1);
-		} else if (clicks === 1) {
-			portada?.classList.remove('estyles_abrir__Z13ze');
-			setclicks(0);
-		}
-	}
 
 	const content =
 		clicks != 0 ? (
@@ -47,7 +37,9 @@ export default function Page() {
 	return (
 		<main className={styles.contenedor}>
 			<Book>
-				<Cover onClick={() => handleClickDiv()}>
+				<Cover
+					id='cover'
+					onClick={() => HandleClickDiv({ clicks, setclicks })}>
 					<p className={styles.letter}>Invitaciones de Quince</p>
 				</Cover>
 				<ListaDeHojas />
