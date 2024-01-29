@@ -72,7 +72,7 @@
   padding: 5px;
 }
 
-.contenedorInvitaciones {
+.contenedorDeLasInvitaciones {
   width: 100%;
   height: 80vh;
   display: flex;
@@ -112,4 +112,39 @@
 
 .Button:hover {
   transform: translateY(-2px);
+}
+
+.ContendorInvitaciones {
+  display: flex;
+  width: 48vh;
+  transition: 0.5s;
+  border: 2px solid white;
+  margin: 5px;
+}
+
+.ContendorInvitaciones>a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContendorInvitaciones>a>img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 3vh;
+  transition: 0.5s;
+}
+
+
+.ContendorInvitaciones>a:hover {
+  filter: grayscale(1);
+  display: flex;
+  width: 48vh;
+}
+
+.ContendorInvitaciones>a:hover>img {
+  border-radius: 50%;
 }
