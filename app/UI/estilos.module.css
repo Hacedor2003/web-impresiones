@@ -1,0 +1,50 @@
+.BarNav {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 2vh;
+}
+
+.BarNav>ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  border: 2px solid black;
+  border-radius: 0px 0px 20px 20px;
+  background-color: black;
+  color: white;
+}
+
+.BarNav >ul >li {
+  padding: 10px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  transition: 0.5s ease;
+}
+
+.BarNav>ul>li:hover {
+  background-color: white;
+  color: black;
+  border-radius: 0px 0px 20px 20px;
+  -webkit-border-radius: 0px 0px 20px 20px;
+  -moz-border-radius: 0px 0px 20px 20px;
+  -ms-border-radius: 0px 0px 20px 20px;
+  -o-border-radius: 0px 0px 20px 20px;
+}
+
+
+.Logo {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  z-index: 10;
+}
