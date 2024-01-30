@@ -1,15 +1,15 @@
-import styles from '../estyles.module.css';
-
+import styles from './styles.module.css'
+import estilos from '../../invitaciones/estyles.module.css'
 import { useRouter } from 'next/navigation';
 
 export const Main = ({ children }: { children: any }) => {
 	const router = useRouter();
 
 	return (
-		<main className={styles.contenedor}>
+		<main className={styles.main}>
 			<button
 				type='button'
-				className={styles.Button}
+				className={estilos.Button}
 				onClick={() => router.back()}>
 				<svg
 					height='16'

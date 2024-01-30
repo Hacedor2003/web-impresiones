@@ -3,10 +3,10 @@ import { useState } from 'react';
 import styles from '../estyles.module.css';
 import handleClickRemove from '../Components/handleClickRemove';
 import HandleClickAdd from '../Components/HandleClickAdd';
-import { Book, Cover, Main } from '../UI/Ui';
-import { ListaDeHojas } from './UI/ListaDeHojas';
-import handleClickDiv from '../Components/handleClickDiv';
+import { Main } from '../UI/Ui';
 import HandleClickDiv from '../Components/handleClickDiv';
+import { ListaDeHojas } from '../UI/ListaDeHojas';
+import estilos from '../Styles/styles.module.css';
 
 export default function Page() {
 	const [clicks, setclicks] = useState(0);
@@ -37,15 +37,18 @@ export default function Page() {
 
 	return (
 		<Main>
-			<Book>
-				<Cover
+			<div
+				className={estilos.Book}
+				id='book'>
+				<section
+					className={estilos.Cover}
 					id='cover'
 					onClick={() => HandleClickDiv({ clicks, setclicks })}>
 					<p className={styles.letter}>Invitaciones de Boda</p>
-				</Cover>
+				</section>
 				<ListaDeHojas />
 				<p>Fin</p>
-			</Book>
+			</div>
 			{content}
 		</Main>
 	);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hoja } from '../../UI/Ui';
+import { Hoja } from '../Components/Estilos';
 
 export const ListaDeHojas = () => {
 	return (
