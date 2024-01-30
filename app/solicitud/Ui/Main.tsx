@@ -1,5 +1,5 @@
-import styles from './styles.module.css'
-import estilos from '../../invitaciones/estyles.module.css'
+import styles from './styles.module.css';
+import estilos from '../../invitaciones/estyles.module.css';
 import { useRouter } from 'next/navigation';
 
 export const Main = ({ children }: { children: any }) => {
@@ -21,7 +21,7 @@ export const Main = ({ children }: { children: any }) => {
 				</svg>
 				Atras
 			</button>
-			<aside>{children}</aside>
+			<aside style={{ width: '100%' }}>{children}</aside>
 		</main>
 	);
 };
