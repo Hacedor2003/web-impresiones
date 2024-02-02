@@ -34,7 +34,6 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: lightgray;
   top: 0;
   position: absolute;
   width: 100%;
@@ -48,4 +47,10 @@
   -webkit-box-shadow: 1px 1px 12px #000;
   box-shadow: 1px 1px 12px #000;
   z-index: 10;
+  background: url('/invitacion.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.Cover:hover {
+  filter: brightness(0.5);
 }

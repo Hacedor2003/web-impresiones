@@ -43,21 +43,18 @@ export default function AnadirSolicitud() {
 							onSubmit={submitHandle}>
 							<div className={classes.control}>
 								<label htmlFor='title'>Nombre:{nombre !== '' ? '✅' : ''}</label>
-								{nombre === '' ? (
-									<input
-										type='text'
-										required
-										id='title'
-										value={nombre}
-										onChange={(e) => setNombre(e.target.value)}
-									/>
-								) : (
-									''
-								)}
+
+								<input
+									type='text'
+									required
+									id='title'
+									value={nombre}
+									onChange={(e) => setNombre(e.target.value)}
+								/>
 							</div>
 							<div className={classes.control}>
 								<label htmlFor='id'>Carnet de Identidad {id !== '' ? '✅' : ''}</label>
-								{id === '' ? (
+								{
 									<input
 										type='text'
 										required
@@ -65,13 +62,11 @@ export default function AnadirSolicitud() {
 										value={id}
 										onChange={(e) => setId(e.target.value)}
 									/>
-								) : (
-									''
-								)}
+								}
 							</div>
 							<div className={classes.control}>
 								<label htmlFor='number'>Telefono: {number !== '' ? '✅' : ''}</label>
-								{number === '' ? (
+								{
 									<input
 										type='text'
 										required
@@ -79,34 +74,28 @@ export default function AnadirSolicitud() {
 										value={number}
 										onChange={(e) => setNumber(e.target.value)}
 									/>
-								) : (
-									''
-								)}
+								}
 							</div>
 							<div className={classes.control}>
 								<label htmlFor='documento'>Documento: {archivo !== null ? '✅' : ''}</label>
-								{archivo === null ? (
+								{
 									<input
 										type='file'
 										required
 										id='documento'
 										onChange={handleFileChange}
 									/>
-								) : (
-									''
-								)}
+								}
 							</div>
 							<div className={classes.control}>
 								<label htmlFor='description'>Descripción {description !== '' ? '✅' : ''}</label>
-								{description === '' ? (
+								{
 									<textarea
 										id='description'
 										rows={5}
 										value={description}
 										onChange={(e) => setDescription(e.target.value)}></textarea>
-								) : (
-									''
-								)}
+								}
 							</div>
 							<div className={classes.actions}>
 								<button type='submit'>Añadir Solicitud</button>

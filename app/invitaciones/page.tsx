@@ -13,8 +13,8 @@ export default function Page() {
 				<div className={styles.ContendorInvitaciones}>
 					<Link href={'/invitaciones/invitaciones_de_boda'}>
 						<Image
-							src='/perfil.jpg'
-							alt='perfil'
+							src='/invitacion.jpg'
+							alt='invitacion'
 							width={400}
 							height={400}
 						/>
@@ -24,8 +24,8 @@ export default function Page() {
 				<div className={styles.ContendorInvitaciones}>
 					<Link href={'/invitaciones/invitaciones_de_quince'}>
 						<Image
-							src='/perfil.jpg'
-							alt='perfil'
+							src='/invitacion.jpg'
+							alt='invitacion'
 							width={400}
 							height={400}
 						/>
@@ -35,8 +35,8 @@ export default function Page() {
 				<div className={styles.ContendorInvitaciones}>
 					<Link href={'/invitaciones/demas_invitaciones'}>
 						<Image
-							src='/perfil.jpg'
-							alt='perfil'
+							src='/invitacion.jpg'
+							alt='invitacion'
 							width={400}
 							height={400}
 						/>

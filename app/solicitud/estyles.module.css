@@ -13,14 +13,13 @@
 }
 
 .ItemLista {
-  margin: 6px;
-  width: 100%;
-  padding: 6px;
-  transition: 0.3s ease-in-out;
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -ms-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 55vw;
 }
 
 .ItemLista:hover {

@@ -15,8 +15,8 @@ export default function Page() {
 					<li className={styles.ItemLista}>
 						<Link href={'/solicitud/Fotocopia'}>
 							<Image
-								src='/perfil.jpg'
-								alt='foto de perfil'
+								src='/impresora.jpg'
+								alt='foto de impresora'
 								width={150}
 								height={150}
 							/>
@@ -31,8 +31,8 @@ export default function Page() {
 					<li className={styles.ItemLista}>
 						<Link href={'/solicitud/Retoque_Fotografico'}>
 							<Image
-								src='/perfil.jpg'
-								alt='foto de perfil'
+								src='/impresora.jpg'
+								alt='foto de impresora'
 								width={150}
 								height={150}
 							/>
@@ -47,8 +47,8 @@ export default function Page() {
 					<li className={styles.ItemLista}>
 						<Link href={'/solicitud/Diseno_Documentos'}>
 							<Image
-								src='/perfil.jpg'
-								alt='foto de perfil'
+								src='/impresora.jpg'
+								alt='foto de impresora'
 								width={150}
 								height={150}
 							/>
@@ -63,8 +63,8 @@ export default function Page() {
 					<li className={styles.ItemLista}>
 						<Link href={'/solicitud/Diseno_Invitaciones'}>
 							<Image
-								src='/perfil.jpg'
-								alt='foto de perfil'
+								src='/impresora.jpg'
+								alt='foto de impresora'
 								width={150}
 								height={150}
 							/>

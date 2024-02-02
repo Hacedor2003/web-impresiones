@@ -44,8 +44,16 @@
 }
 
 .letter {
+  font-family: fangsong;
   font-size: 20px;
   font-weight: bolder;
+  background: aliceblue;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .contenedor {
@@ -117,9 +125,15 @@
 .ContendorInvitaciones {
   display: flex;
   width: 48vh;
+  height: 52vh;
   transition: 0.5s;
   border: 2px solid white;
   margin: 5px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .ContendorInvitaciones>a {
@@ -134,7 +148,7 @@
 .ContendorInvitaciones>a>img {
   width: 100%;
   height: auto;
-  margin-bottom: 3vh;
+  margin-bottom: 1vh;
   transition: 0.5s;
 }
 
@@ -145,6 +159,23 @@
   width: 48vh;
 }
 
+.ContendorInvitaciones:hover~.ContendorInvitaciones {
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+}
+
+.ContendorInvitaciones>a:hover>p {
+  margin: 12px;
+}
+
 .ContendorInvitaciones>a:hover>img {
-  border-radius: 50%;
+  border-radius: 10%;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
