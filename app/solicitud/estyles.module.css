@@ -55,7 +55,17 @@
   width: 40vw;
 }
 
-.ItemLista>a>section>small{
+.ItemLista>a>section>h2 {
+  padding: 7px;
+}
+
+.ItemLista>a>section>h5 {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 2px;
+  font-size: large;
+}
+
+.ItemLista>a>section>small {
   display: contents;
 }
 

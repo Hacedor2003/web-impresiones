@@ -4,7 +4,7 @@ import { UiTarjeta } from './UiTarjeta';
 export const Acerca = ({ visible }: { visible: boolean }) => {
 	return (
 		<UiTarjeta visible={visible}>
-			<div>Acerca</div>
+			<div></div>
 		</UiTarjeta>
 	);
 };

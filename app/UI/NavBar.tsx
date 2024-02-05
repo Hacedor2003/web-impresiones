@@ -17,11 +17,11 @@ export const NavBar = ({ children }: { children: ReactNode }) => {
 			setVisibleComponent(componentName);
 		}
 	};
+	//<aside className={estilos.Logo}>Logo</aside>
 
 	return (
 		<>
 			<div className={estilos.BarNav}>
-				<aside className={estilos.Logo}>Logo</aside>
 				<ul>
 					<li onClick={() => handleComponentClick('Horario')}>Ver Horario</li>
 					<li onClick={() => handleComponentClick('Ubicacion')}>Ver Ubicación</li>

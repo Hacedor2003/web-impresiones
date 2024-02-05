@@ -21,8 +21,8 @@ export default function Page() {
 								height={150}
 							/>
 							<section>
-								<span>Fotocopia:</span>
-								<span>Precio:</span>
+								<h2>Fotocopia:</h2>
+								<h5>Precio:</h5>
 								<span>Description:</span>
 								<p>Envie su documento o foto para imprimir y recogerlo más tarde</p>
 							</section>
@@ -37,8 +37,8 @@ export default function Page() {
 								height={150}
 							/>
 							<section>
-								<span>Retoque Fotografico:</span>
-								<span>Precio:</span>
+								<h2>Retoque Fotografico:</h2>
+								<h5>Precio:</h5>
 								<span>Description:</span>
 								<p>Envie su foto con una descripción para añarle efectos o retoques</p>
 							</section>
@@ -53,8 +53,8 @@ export default function Page() {
 								height={150}
 							/>
 							<section>
-								<span>Diseño e impresiòn de documentos:</span>
-								<span>Precio:</span>
+								<h2>Diseño e impresiòn de documentos:</h2>
+								<h5>Precio:</h5>
 								<span>Description:</span>
 								<p>Envie una descripción para diseñar un documento y recojer más tarde el documento</p>
 							</section>
@@ -69,13 +69,11 @@ export default function Page() {
 								height={150}
 							/>
 							<section>
-								<span>Tarjetas de Presentación y Diseño de invitaciones:</span>
-								<span>Precio:</span>
+								<h2>Tarjetas de Presentación y Diseño de invitaciones:</h2>
+								<h5>Precio:</h5>
 								<span>Description:</span>
-								<p>Envie unos datos para imprimir las invitaciones deseada para sus</p>
-								<small>
-									<EtiquetaInvitacion />
-								</small>
+								<p>Envie unos datos para imprimir las invitaciones deseada para sus </p>
+								<EtiquetaInvitacion />
 							</section>
 						</Link>
 					</li>

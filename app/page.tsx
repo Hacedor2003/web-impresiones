@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { Container } from 'react-bootstrap';
 import Link from 'next/link';
 import './page.css';
@@ -18,13 +18,7 @@ export default function Home() {
 				className={'btnHome'}
 				id={'btn-imprimir'}
 				href={'/solicitud'}>
-				<p id={'letras'}>Reservar Impresión</p>
-			</Link>
-			<Link
-				className={'btnHome'}
-				id={'btn-invitaciones'}
-				href={'/invitaciones'}>
-				<p id={'letras'}>Ver nuestras Invitaciones</p>
+				<h1 id={'letras'}>Reservar Impresión</h1>
 			</Link>
 		</Container>
 	);

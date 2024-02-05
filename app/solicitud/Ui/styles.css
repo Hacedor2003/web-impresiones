@@ -2,4 +2,9 @@
   display: ruby;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.4rem;
+  transition: 1s ease-in-out all;
+  -webkit-transition: 1s ease-in-out all;
+  -moz-transition: 1s ease-in-out all;
+  -ms-transition: 1s ease-in-out all;
+  -o-transition: 1s ease-in-out all;
 }

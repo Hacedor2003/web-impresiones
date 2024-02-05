@@ -34,7 +34,7 @@ export const EtiquetaInvitacion = () => {
 					key={idx}
 					className={styles.itemListaInvitaciones}
 					id={index === idx ? 'activo' : ''}>
-					<small>{item}</small>
+					<>{item}</>
 				</li>
 			))}
 		</ul>

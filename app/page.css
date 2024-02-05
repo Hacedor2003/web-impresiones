@@ -1,5 +1,5 @@
 .btnHome {
-  height: 50%;
+  height: 100%;
   width: 100%;
   border: none;
   display: flex;
@@ -33,14 +33,59 @@
   opacity: 0.5;
 }
 
-#btn-imprimir:hover>p,
-#btn-invitaciones:hover>p {
-  text-decoration: underline;
+@keyframes borderlisimo {
+  0% {
+    border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -ms-border-radius: 0px 0px 0px 0px;
+    -o-border-radius: 0px 0px 0px 0px;
+  }
+
+  25% {
+    border-radius: 20px 0px 0px 0px;
+    -webkit-border-radius: 20px 0px 0px 0px;
+    -moz-border-radius: 20px 0px 0px 0px;
+    -ms-border-radius: 20px 0px 0px 0px;
+    -o-border-radius: 20px 0px 0px 0px;
+  }
+
+  50% {
+    border-radius: 0px 20px 0px 0px;
+    -webkit-border-radius: 0px 20px 0px 0px;
+    -moz-border-radius: 0px 20px 0px 0px;
+    -ms-border-radius: 0px 20px 0px 0px;
+    -o-border-radius: 0px 20px 0px 0px;
+  }
+
+  70% {
+    border-radius: 0px 0px 20px 0px;
+    -webkit-border-radius: 0px 0px 20px 0px;
+    -moz-border-radius: 0px 0px 20px 0px;
+    -ms-border-radius: 0px 0px 20px 0px;
+    -o-border-radius: 0px 0px 20px 0px;
+  }
+
+  100% {
+    border-radius: 0px 0px 0px 20px;
+    -webkit-border-radius: 0px 0px 0px 20px;
+    -moz-border-radius: 0px 0px 0px 20px;
+    -ms-border-radius: 0px 0px 0px 20px;
+    -o-border-radius: 0px 0px 0px 20px;
+  }
+}
+
+#btn-imprimir:hover>h1,
+#btn-invitaciones:hover>h1 {
+  animation: 2s borderlisimo infinite;
+  -webkit-animation: 2s borderlisimo infinite;
 }
 
 #letras {
-  font: 2rem 'Times New Roman', Times, serif;
+  font: 5rem 'Times New Roman', Times, serif;
   color: black;
+  transition: 0.25s ease;
+  border: 5px solid;
 }
 
 .contenedor {
@@ -61,4 +106,13 @@
   transition: 400ms color cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-@media screen and (max-width:1230px) {}
+@media screen and (max-width:1470px) {
+  #letras {
+    position: relative;
+    bottom: 20vh;
+    font: 3rem 'Times New Roman', Times, serif;
+  }
+    #btn-imprimir {
+      background-position: bottom;
+    }
+}
