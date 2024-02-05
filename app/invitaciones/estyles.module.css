@@ -84,8 +84,8 @@
 }
 
 .contenedorBtn button:hover {
-    filter: brightness(0.5);
-    cursor: pointer;
+  filter: brightness(0.5);
+  cursor: pointer;
 }
 
 .contenedorBtn button>svg {
@@ -137,7 +137,7 @@
 
 .ContendorInvitaciones {
   display: flex;
-  width: 48vh;
+  width: 45vh;
   height: 52vh;
   transition: 0.5s;
   border: 2px solid white;
@@ -191,4 +191,12 @@
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
+}
+
+@media screen and (max-width:415px) {
+  .contenedor>aside {
+    position: relative;
+    left: 0vw;
+  }
+
 }
