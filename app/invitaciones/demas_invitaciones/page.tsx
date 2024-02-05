@@ -7,6 +7,7 @@ import { Main } from '../UI/Ui';
 import { ListaDeHojas } from '../UI/ListaDeHojas';
 import HandleClickDiv from '../Components/handleClickDiv';
 import estilos from '../Styles/styles.module.css';
+import { BotonesFlechas } from '../UI/BotonesFlechas';
 
 export default function Page() {
 	const [clicks, setclicks] = useState(0);
@@ -19,19 +20,10 @@ export default function Page() {
 	};
 	const content =
 		clicks != 0 ? (
-			<div className={styles.contenedorBtn}>
-				<button
-					type='button'
-					onClick={() => handleClickRemove(props)}>
-					Atras
-				</button>
-				<button
-					type='button'
-					disabled={desabilitado}
-					onClick={() => HandleClickAdd(props)}>
-					Siguiente
-				</button>
-			</div>
+			<BotonesFlechas
+				clicks={clicks}
+				setclicks={setclicks}
+			/>
 		) : null;
 
 	return (

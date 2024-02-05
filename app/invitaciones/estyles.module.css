@@ -78,6 +78,18 @@
 .contenedorBtn button {
   margin-left: 20px;
   padding: 5px;
+  border: none;
+  background: none;
+  transform: scale(1.5);
+}
+
+.contenedorBtn button:hover {
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+
+.contenedorBtn button>svg {
+  fill: white;
 }
 
 .contenedorDeLasInvitaciones {
@@ -87,7 +99,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .Button {
