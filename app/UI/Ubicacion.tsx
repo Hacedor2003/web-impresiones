@@ -12,6 +12,7 @@ export const Ubicacion = ({ visible }: { visible: boolean }) => {
 				allowFullScreen
 				loading='lazy'
 				referrerPolicy='no-referrer-when-downgrade'></iframe>
+			<p>Direccion</p>
 		</UiTarjeta>
 	);
 };

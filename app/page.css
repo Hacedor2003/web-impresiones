@@ -26,11 +26,19 @@
 #btn-imprimir {
   background-image: url(/impresora.jpg);
   background-position: right;
+  width: 91vw;
+  height: 65vh;
+  border: 5px solid black;
+  animation: 2s borderlisimo infinite;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 #btn-imprimir:hover,
 #btn-invitaciones:hover {
-  opacity: 0.5;
+  filter: grayscale(1);
 }
 
 @keyframes borderlisimo {
@@ -43,49 +51,50 @@
   }
 
   25% {
-    border-radius: 20px 0px 0px 0px;
-    -webkit-border-radius: 20px 0px 0px 0px;
-    -moz-border-radius: 20px 0px 0px 0px;
-    -ms-border-radius: 20px 0px 0px 0px;
-    -o-border-radius: 20px 0px 0px 0px;
+    border-radius: 30px 0px 0px 0px;
+    -webkit-border-radius: 30px 0px 0px 0px;
+    -moz-border-radius: 30px 0px 0px 0px;
+    -ms-border-radius: 30px 0px 0px 0px;
+    -o-border-radius: 30px 0px 0px 0px;
   }
 
   50% {
-    border-radius: 0px 20px 0px 0px;
-    -webkit-border-radius: 0px 20px 0px 0px;
-    -moz-border-radius: 0px 20px 0px 0px;
-    -ms-border-radius: 0px 20px 0px 0px;
-    -o-border-radius: 0px 20px 0px 0px;
+    border-radius: 0px 30px 0px 0px;
+    -webkit-border-radius: 0px 30px 0px 0px;
+    -moz-border-radius: 0px 30px 0px 0px;
+    -ms-border-radius: 0px 30px 0px 0px;
+    -o-border-radius: 0px 30px 0px 0px;
   }
 
   70% {
-    border-radius: 0px 0px 20px 0px;
-    -webkit-border-radius: 0px 0px 20px 0px;
-    -moz-border-radius: 0px 0px 20px 0px;
-    -ms-border-radius: 0px 0px 20px 0px;
-    -o-border-radius: 0px 0px 20px 0px;
+    border-radius: 0px 0px 30px 0px;
+    -webkit-border-radius: 0px 0px 30px 0px;
+    -moz-border-radius: 0px 0px 30px 0px;
+    -ms-border-radius: 0px 0px 30px 0px;
+    -o-border-radius: 0px 0px 30px 0px;
   }
 
   100% {
-    border-radius: 0px 0px 0px 20px;
-    -webkit-border-radius: 0px 0px 0px 20px;
-    -moz-border-radius: 0px 0px 0px 20px;
-    -ms-border-radius: 0px 0px 0px 20px;
-    -o-border-radius: 0px 0px 0px 20px;
+    border-radius: 0px 0px 0px 30px;
+    -webkit-border-radius: 0px 0px 0px 30px;
+    -moz-border-radius: 0px 0px 0px 30px;
+    -ms-border-radius: 0px 0px 0px 30px;
+    -o-border-radius: 0px 0px 0px 30px;
   }
 }
 
 #btn-imprimir:hover>h1,
-#btn-invitaciones:hover>h1 {
-  animation: 2s borderlisimo infinite;
-  -webkit-animation: 2s borderlisimo infinite;
-}
+#btn-invitaciones:hover>h1 {}
 
 #letras {
-  font: 5rem 'Times New Roman', Times, serif;
+  font: 4rem 'Times New Roman', Times, serif;
   color: black;
   transition: 0.25s ease;
-  border: 5px solid;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contenedor {
@@ -94,6 +103,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: white;
 }
 
 .linkBtn {
@@ -108,11 +118,10 @@
 
 @media screen and (max-width:1470px) {
   #letras {
-    position: relative;
-    bottom: 20vh;
     font: 3rem 'Times New Roman', Times, serif;
   }
-    #btn-imprimir {
-      background-position: bottom;
-    }
+
+  #btn-imprimir {
+    background-position: top;
+  }
 }

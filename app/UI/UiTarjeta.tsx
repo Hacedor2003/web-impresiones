@@ -2,19 +2,21 @@ import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 
 const Contenedor = styled.div`
-	background-color: #8c8c9f;
+	background-color: white;
 	position: absolute;
 	right: 30vw;
 	top: 20vh;
 	height: 60vh;
 	width: 40vw;
 	z-index: 10;
-	border: 5px solid #4f4f52;
+	border: 5px solid black;
 	display: flex;
+	align-content: flex-start;
+	color: black;
 	flex-direction: column;
 	flex-wrap: wrap;
-	align-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 `;
 export const UiTarjeta = ({ children, visible }: { children: ReactElement; visible: boolean }) => {
 	return (
