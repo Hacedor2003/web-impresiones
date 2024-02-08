@@ -7,24 +7,22 @@ export default async function addSolicitudFileHandler(solicitudData: any, setLoa
 	const urlFile = `https://api.telegram.org/bot${TOKEN_BOT_API}/sendDocument`;
 
 	setLoading(true);
-	const file = solicitudData;
+	const formData = new FormData();
+	formData.append('chat_id', CHAT_ID);
+	formData.append('document', solicitudData);
+
 	return axios
-		.post(
-			urlFile,
-			{
-				chat_id: CHAT_ID,
-				document: file,
+		.post(urlFile, formData, {
+			headers: {
+				'Content-Type': 'multipart/form-data',
 			},
-			{
-				headers: {
-					'Content-Type': 'multipart/form-data',
-				},
-			}
-		)
+		})
 		.then((response) => {
 			setLoading(false);
+			console.log('Esta es la respuesta del servidor', response);
 		})
 		.catch((error) => {
-			console.log(error), setLoading(false);
+			console.log(error);
+			setLoading(false);
 		});
 }
