@@ -10,20 +10,19 @@ export default async function addSolicitudFileHandler(solicitudData: any, setLoa
 	const formData = new FormData();
 	formData.append('chat_id', CHAT_ID);
 	formData.append('document', solicitudData);
-	console.log("Data a enviar", solicitudData);
+	console.log('Data a enviar', solicitudData);
 
-	return axios
-		.post(urlFile, formData, {
+	try {
+		const response = await axios.post(urlFile, formData, {
 			headers: {
 				'Content-Type': 'multipart/form-data',
 			},
-		})
-		.then((response) => {
-			setLoading(false);
-			console.log('Esta es la respuesta del servidor', response);
-		})
-		.catch((error) => {
-			console.log(error);
-			setLoading(false);
 		});
+
+		setLoading(false);
+		console.log('Esta es la respuesta del servidor', response);
+	} catch (error) {
+		console.log(error);
+		setLoading(false);
+	}
 }
