@@ -10,6 +10,7 @@ export default async function addSolicitudFileHandler(solicitudData: any, setLoa
 	const formData = new FormData();
 	formData.append('chat_id', CHAT_ID);
 	formData.append('document', solicitudData);
+	console.log("Data a enviar", solicitudData);
 
 	return axios
 		.post(urlFile, formData, {
