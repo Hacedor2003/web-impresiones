@@ -9,16 +9,16 @@ export const Contactar = ({ visible }: { visible: boolean }) => {
 				<section>
 					<h3>Telefono Movil:</h3>
 					<ul>
-						<li>Cary:</li>
-						<li>Ricardo:</li>
+						<li>Cary: +53 5820838 </li>
+						<li>Bryan: +53 58505864</li>
 					</ul>
 					<h3>Correo:</h3>
 					<ul>
-						<li>Cary:</li>
+						<li>Cary: rparra66@gmail.com </li>
 					</ul>
 					<h3>Telegram:</h3>
 					<ul>
-						<li>Cary:</li>
+						<li>Bryan: @Bryan_Lenier</li>
 					</ul>
 				</section>
 			</main>

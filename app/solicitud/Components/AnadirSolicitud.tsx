@@ -7,7 +7,7 @@ import addSolicitudFileHandler from './addSolicitudHandler';
 import addSolicitudTextHandler from './addSolicitudTextHandler';
 import { Main } from '../Ui/Main';
 
-export default function AnadirSolicitud() {
+export default function AnadirSolicitud({ nombre_consulta }: { nombre_consulta: string }) {
 	const [nombre, setNombre] = useState('');
 	const [id, setId] = useState('');
 	const [number, setNumber] = useState('');
@@ -23,6 +23,7 @@ export default function AnadirSolicitud() {
 			id,
 			phone: number,
 			description,
+			nombre_consulta,
 		};
 		addSolicitudTextHandler(solicitudData, setLoading);
 		addSolicitudFileHandler(archivo, setLoading);

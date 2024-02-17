@@ -22,7 +22,7 @@ export default function Page() {
 							/>
 							<section>
 								<h2>Fotocopia:</h2>
-								<h5>Precio:</h5>
+								<h5>Precio: 20 CUP</h5>
 								<span>Description:</span>
 								<p>Envie su documento o foto para imprimir y recogerlo más tarde</p>
 							</section>
@@ -38,7 +38,7 @@ export default function Page() {
 							/>
 							<section>
 								<h2>Retoque Fotografico:</h2>
-								<h5>Precio:</h5>
+								<h5>Precio: 200 CUP</h5>
 								<span>Description:</span>
 								<p>Envie su foto con una descripción para añarle efectos o retoques</p>
 							</section>
@@ -54,7 +54,7 @@ export default function Page() {
 							/>
 							<section>
 								<h2>Diseño e impresiòn de documentos:</h2>
-								<h5>Precio:</h5>
+								<h5>Precio: 150 CUP</h5>
 								<span>Description:</span>
 								<p>Envie una descripción para diseñar un documento y recojer más tarde el documento</p>
 							</section>
@@ -70,10 +70,9 @@ export default function Page() {
 							/>
 							<section>
 								<h2>Tarjetas de Presentación y Diseño de invitaciones:</h2>
-								<h5>Precio:</h5>
+								<h5>Precio: Dependiendo</h5>
 								<span>Description:</span>
-								<p>Envie unos datos para imprimir las invitaciones deseada para sus </p>
-								<EtiquetaInvitacion />
+								<p>Envie unos datos para imprimir las invitaciones deseada para sus {EtiquetaInvitacion()}</p>
 							</section>
 						</Link>
 					</li>
